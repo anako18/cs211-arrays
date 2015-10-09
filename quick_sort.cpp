@@ -10,10 +10,19 @@ using std::swap;
 // заданной отрезком [left, right), так что в начале
 // следуют элементы меньшие pivot, а в конце - большие;
 // возвращает место начала блока элементов, больших pivot;
+
+void print(const int * arr, int size, char delim = ' ')
+{
+	for (int i = 0; i < size; ++i)
+	{
+		std::cout << arr[i] << delim;
+	}
+}
+
 int * partition(int * left, int *  right, int pivot) {
 	int * store = left; // место для вставки элементов, меньших pivot
 	for (int * p = left; p != right; ++p)
-		if (*p < pivot)
+		if (*p <= pivot)
 			swap(*p, *store++);
 	return store;
 }
