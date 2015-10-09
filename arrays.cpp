@@ -1,8 +1,6 @@
 #include <iostream>
 #include <cassert>
 
-#if 0
-// NOTE: you should move this `if` down as you start solving each task
 
 void task_1()
 {
@@ -13,8 +11,12 @@ void task_1()
      * for explanation see:
      *  https://gcc.gnu.org/onlinedocs/gcc/Variable-Length.html*/
     int n = 10;
-    int a[n];
+	int * a = new int[n];
 }
+
+
+#if 0
+// NOTE: you should move this `if` down as you start solving each task
 
 // Task 2
 void task_2()
