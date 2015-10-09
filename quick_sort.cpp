@@ -11,13 +11,6 @@ using std::swap;
 // следуют элементы меньшие pivot, а в конце - большие;
 // возвращает место начала блока элементов, больших pivot;
 
-void print(const int * arr, int size, char delim = ' ')
-{
-	for (int i = 0; i < size; ++i)
-	{
-		std::cout << arr[i] << delim;
-	}
-}
 
 int * partition(int * left, int *  right, int pivot) {
 	int * store = left; // место для вставки элементов, меньших pivot
@@ -32,6 +25,15 @@ void my_qsort(int * arr, int n) {
 		return; // массив в 1 или 0 элементов уже упорядочен
 	int * pivotPtr = arr + rand() % n; // случайный выбор опорного элемента
 	int newPivotIdx = partition(arr, arr + n, *pivotPtr) - arr;
-	my_qsort(arr, newPivotIdx + 1);
-	my_qsort(arr + newPivotIdx, n - (newPivotIdx + 1));
+	my_qsort(arr, newPivotIdx);
+	my_qsort(arr + newPivotIdx, n - (newPivotIdx));
+}
+
+
+void print(const int * arr, int size, char delim = ' ')
+{
+	for (int i = 0; i < size; ++i)
+	{
+		std::cout << arr[i] << delim;
+	}
 }
