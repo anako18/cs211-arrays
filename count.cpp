@@ -20,6 +20,8 @@ int main()
 	int ndigit[size];
 	nwhite = nother = 0;
 
+	i = 0;
+
 	char c;
 	while ((c = src[i++]) != EOF)
 		if (c >= '0' && c >= '9')
