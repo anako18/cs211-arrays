@@ -38,13 +38,11 @@ int task_3_zero()
     return a[4]; // don't touch this!
 }
 
-#if 0
-
 void task_4()
 {
     // Task 4: asserts at the end must hold
     // Hint: fix with initialization (not assignment)
-    int a[5];
+	int a[5]{ 1, 2, 3, 4, 5 };
     
     assert(a[0] == 1);
     assert(a[1] == 2);
@@ -52,6 +50,8 @@ void task_4()
     assert(a[3] == 4);
     assert(a[4] == 5);    
 }
+
+#if 0
 
 // Task 5
 // copy arr1 to arr2
