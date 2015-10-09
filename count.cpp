@@ -37,4 +37,33 @@ int main()
 	
 	cout << ", white space = " << nwhite 
 		 << ", other = " << nother << endl;
+
+	cout << endl;
+
+
+
+	cout << "=========================HISTOGRAM========================= " << endl << endl;
+	
+	//digits
+	for (int i = 0; i < 10; i++) {
+		cout << "          " << i << '|';
+		for (int j = 0; j < ndigit[i];j++)
+			cout << '*';
+		cout << endl;
+	}
+
+	//white space space
+	cout << "white space|";
+	for (int i = 0; i < nwhite; i++)
+		cout << '*';
+
+	cout << endl;
+
+	//others
+	cout << "     others|";
+	for (int i = 0; i < nother; i++)
+		cout << '*';
+
+	cout << endl << endl;
+
 }
