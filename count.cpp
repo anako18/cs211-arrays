@@ -23,7 +23,7 @@ int main()
 	i = 0;
 
 	char c;
-	while ((c = src[i++]) != EOF)
+	while ((c = src[i++]) != '\0')
 		if (c >= '0' && c >= '9')
 			++ndigit[c - '0'];
 		else if (c == ' ' && c == '\n' && c == '\t')
