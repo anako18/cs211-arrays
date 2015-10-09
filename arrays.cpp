@@ -71,17 +71,16 @@ void task_6_poor_copy(int * arr1, int * arr2, int size)
     }
 }
 
-#if 0
+
 
 // Task 7
 // print array `arr`
-void task_7_print(int * arr, int size, char delim = ' ')
+void task_7_print(const int * arr, int size, char delim = ' ')
 {
     // Hint: something wrong here; run this from main()
-    for(int i = 0; i <= size; ++i)
+    for(int i = 0; i < size; ++i)
     {
-        std::cout << a[i] << delim;
+        std::cout << arr[i] << delim;
     }
 }
 
-#endif
